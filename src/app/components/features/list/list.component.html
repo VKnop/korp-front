@@ -1,1 +1,13 @@
-<p>list works!</p>
+
+  <ul>
+    <h3>PRODUTOS: </h3>
+    @for (product of products; track product.id) {
+      <li>
+        <div>
+          <h3> CÓDIGO:  {{  product.code   }} </h3>
+          <h3> DESCRIÇÃO: {{  product.description   }}</h3>
+          <h3> SALDO:  {{  product.balance   }}   </h3>
+        </div>
+      </li>
+    }
+  </ul>
