@@ -1,7 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Product } from '../components/interfaces/product';
 import { ProductPayload } from '../components/interfaces/product_payload';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Injectable({
   providedIn: 'root'
@@ -23,8 +24,7 @@ export class ProductsService {
       },
       body: JSON.stringify(payload),
     };
-
-      console.log(request.body)
-    return this.httpClient.post("http://localhost:8000/product", request.body);
+    const res : Observable<HttpResponse<any>> = this.httpClient.post<any>("http://localhost:8000/product", request.body, { observe: 'response' });
+    return res
   }
 }
