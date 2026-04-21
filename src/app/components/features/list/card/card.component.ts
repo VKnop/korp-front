@@ -1,7 +1,7 @@
 import { Component, computed, input } from '@angular/core';
 import{ MatCardModule } from "@angular/material/card"
 import{ MatButtonModule } from "@angular/material/button"
-import { Product } from '../../../../../../product';
+import { Product } from '../../../interfaces/product';
 
 
 @Component({

@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { Product } from '../../../../../product';
+import { Product } from '../../interfaces/product';
 import { ProductsService } from '../../../services/product.service';
 import { CardComponent } from './card/card.component';
 import { RouterLink } from "@angular/router";
