@@ -2,15 +2,6 @@
   <ul>
     <h3>PRODUTOS: </h3>
     @for (product of products; track product.id) {
-    <mat-card appearance="outlined">
-      <mat-card-header>
-        <mat-card-title> {{product.code}}</mat-card-title>
-        <mat-card-subtitle>Descrição: {{product.description}}</mat-card-subtitle>
-        <mat-card-subtitle>Quantidade: {{product.balance}}</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-actions>
-        <button matButton>Learn More</button>
-      </mat-card-actions>
-    </mat-card>
+    <app-card [product]="product"></app-card>
     }
   </ul>
