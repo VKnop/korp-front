@@ -2,13 +2,17 @@ import { Component, inject } from '@angular/core';
 import { Product } from '../../../../../product';
 import { ProductsService } from '../../../services/product.service';
 import { CardComponent } from './card/card.component';
+import { RouterLink } from "@angular/router";
+import { MatButtonModule } from '@angular/material/button';
+
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [CardComponent],
+  imports: [CardComponent, RouterLink, MatButtonModule],
   templateUrl: './list.component.html',
   styleUrl: './list.component.scss'
 })
+
 export class ListComponent {
 
   products: Product[] = []

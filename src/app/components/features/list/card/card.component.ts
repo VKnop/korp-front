@@ -16,5 +16,8 @@ export class CardComponent {
  product = input.required<Product>();
 
  productId = computed(() => this.product().id);
+ productCode = computed(() => this.product().code);
+ productDescription = computed(() => this.product().description);
+ productBalance = computed(() => this.product().balance);
 
 }
